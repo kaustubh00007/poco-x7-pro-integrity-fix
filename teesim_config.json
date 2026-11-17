@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "profiles": {
+    "default": {
+      "keybox": "keybox.xml",
+      "mode": "patch",
+      "patchLevel": { "system": "2026-11-05", "vendor": "2026-11-05", "boot": "2026-11-05" },
+      "osVersion": "16",
+      "brand": "google",
+      "device": "caiman",
+      "product": "caiman_beta",
+      "manufacturer": "Google",
+      "model": "Pixel 9 Pro",
+      "serial": "",
+      "imei": "",
+      "meid": "",
+      "imei2": "",
+      "apps": [
+        "com.google.android.gms",
+        "com.android.vending",
+        "com.google.android.apps.nbu.paisa.user",
+        "com.phonepe.app",
+        "io.github.vvb2060.keyattestation"
+      ]
+    }
+  }
+}

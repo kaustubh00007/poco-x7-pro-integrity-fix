@@ -1,0 +1,13 @@
+# NEVER commit private keys, device boot images or logs
+keybox*.xml
+boot_*.img
+*.log
+
+# Local tooling (portable git, SSH private keys)
+_tools/
+.ssh/
+
+# OS junk
+Thumbs.db
+.DS_Store
+desktop.ini

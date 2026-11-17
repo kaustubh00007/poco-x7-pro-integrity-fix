@@ -1,0 +1,30 @@
+PIF profile that matched the TEESimulator identity (working state, 17 Nov 2026)
+=============================================================================
+Generated on-device with:  su -c 'cd /data/adb/modules/playintegrityfix && sh autopif4.sh -m'
+
+MANUFACTURER=Google
+MODEL=Pixel 9 Pro
+FINGERPRINT=google/caiman_beta/caiman:CANARY/ZP11.261016.008/16754936:user/release-keys
+PRODUCT=caiman_beta
+DEVICE=caiman
+SECURITY_PATCH=2026-11-05
+DEVICE_INITIAL_SDK_INT=34
+
+# Advanced flags as resolved by PIF v19 (in the module's pif.prop):
+#   spoofBuild=1
+#   spoofProps=1
+#   spoofProvider=0     <-- must be 0 when TEESimulator provides the attestation
+#   spoofSignature=0
+#   spoofVendingFinger=0
+#   spoofVendingSdk=0
+#   verboseLogs=0
+
+# CRITICAL: these values must match teesim_config.json exactly:
+#   brand=google, device=caiman, product=caiman_beta,
+#   manufacturer=Google, model=Pixel 9 Pro
+# If they diverge, TEESimulator's KeyMint TA returns CANNOT_ATTEST_IDS
+# ("attestation ID mismatch for AttestationIdBrand/Model") and no verdict is produced.
+
+# Re-generate this profile whenever Play Integrity starts failing:
+#   adb shell "su -c 'cd /data/adb/modules/playintegrityfix && sh autopif4.sh -m'"
+#   adb reboot
